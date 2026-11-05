@@ -1,0 +1,74 @@
+/* Customers page */
+
+.admin-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.booking-management {
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.booking-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.booking-search {
+  padding: 11px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  min-width: 250px;
+  outline: none;
+}
+
+.booking-search:focus {
+  border-color: #2563eb;
+}
+
+.booking-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+.booking-table th,
+.booking-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.booking-table th {
+  background: #f8fafc;
+  color: #475569;
+  font-size: 14px;
+}
+
+.booking-table td {
+  color: #334155;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .booking-management {
+    padding: 15px;
+  }
+
+  .booking-search {
+    width: 100%;
+    min-width: 0;
+  }
+}

@@ -1,0 +1,642 @@
+
+.admin-reels-page {
+  min-height: 100vh;
+  padding: 40px;
+  background: #080d0a;
+  color: #f8fafc;
+}
+
+.admin-reels-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.admin-reels-header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: #f8fafc;
+}
+
+.admin-reels-header p {
+  color: #94a3b8;
+  margin: 0;
+}
+
+.reels-back-btn {
+  padding: 12px 20px;
+  border: 1px solid #14532d;
+  border-radius: 8px;
+  background: #14532d;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.reels-back-btn:hover {
+  background: #166534;
+  transform: translateY(-2px);
+}
+
+.admin-reels-form {
+  max-width: 650px;
+  padding: 30px;
+  background: #111a14;
+  border: 1px solid #26372b;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.admin-reels-form h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #86efac;
+  font-size: 23px;
+}
+
+.admin-reels-form label {
+  display: block;
+  margin: 18px 0 8px;
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-reels-form input,
+.admin-reels-form select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #334638;
+  border-radius: 8px;
+  background: #080d0a;
+  color: #f8fafc;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.admin-reels-form input:focus,
+.admin-reels-form select:focus {
+  border-color: #22c55e;
+}
+
+.admin-reels-form input::placeholder {
+  color: #64748b;
+}
+
+.reels-submit-btn {
+  width: 100%;
+  margin-top: 28px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #16a34a;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.reels-submit-btn:hover {
+  background: #15803d;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .admin-reels-page {
+    padding: 20px;
+  }
+
+  .admin-reels-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-reels-header h1 {
+    font-size: 26px;
+  }
+
+  .admin-reels-form {
+    padding: 20px;
+  }
+}
+
+/* ==============================
+   SAVED REELS / PROJECTS
+============================== */
+
+.admin-reels-list {
+  margin-top: 35px;
+  padding: 28px;
+  background: linear-gradient(145deg, #111c17, #0b120e);
+  border: 1px solid rgba(34, 197, 94, 0.16);
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+}
+
+.admin-reels-list h2 {
+  color: #f8fafc;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-reels-list > p {
+  color: #9ca3af;
+  font-size: 14px;
+  padding: 15px 0;
+}
+
+.admin-reel-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 14px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  transition: all 0.25s ease;
+}
+
+.admin-reel-item:last-child {
+  margin-bottom: 0;
+}
+
+.admin-reel-item:hover {
+  transform: translateY(-3px);
+  background: rgba(20, 83, 45, 0.2);
+  border-color: rgba(34, 197, 94, 0.35);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+.admin-reel-item h3 {
+  color: #f9fafb;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.admin-reel-item p {
+  color: #86efac;
+  font-size: 13px;
+  margin: 0 0 10px;
+}
+
+.admin-reel-item a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #4ade80;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.admin-reel-item a:hover {
+  color: #bbf7d0;
+  text-decoration: underline;
+}
+
+.reel-delete-btn {
+  flex-shrink: 0;
+  padding: 10px 16px;
+  color: #fecaca;
+  background: rgba(127, 29, 29, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reel-delete-btn:hover {
+  background: #991b1b;
+  color: #ffffff;
+  border-color: #b91c1c;
+  transform: translateY(-1px);
+}
+
+/* Responsive layout */
+
+@media (max-width: 600px) {
+  .admin-reels-list {
+    padding: 18px;
+    margin-top: 25px;
+  }
+
+  .admin-reel-item {
+    align-items: flex-start;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .admin-reel-item h3 {
+    font-size: 15px;
+  }
+
+  .reel-delete-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* ==================================
+   PRL SHOOTS - MANAGE REELS FIX
+================================== */
+
+.admin-reels-page {
+  min-height: 100vh;
+  padding: 35px 4%;
+  background: #0b0f0c;
+  color: #f8fafc;
+  box-sizing: border-box;
+}
+
+.admin-reels-page * {
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.admin-reels-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.admin-reels-header h1 {
+  color: #22c55e;
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.admin-reels-header p {
+  color: #94a3b8;
+  margin: 0;
+  font-size: 14px;
+}
+
+.reels-back-btn {
+  background: #14532d;
+  color: #ffffff;
+  border: 1px solid #166534;
+  border-radius: 9px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.reels-back-btn:hover {
+  background: #166534;
+}
+
+/* Add Project Form */
+
+.admin-reels-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 30px;
+  background: #111a14 !important;
+  border: 1px solid #263b2c;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.admin-reels-form h2 {
+  color: #f8fafc;
+  font-size: 22px;
+  margin: 0 0 12px;
+}
+
+.admin-reels-form label {
+  display: block;
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.admin-reels-form input,
+.admin-reels-form select {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  color: #f8fafc !important;
+  background: #0b120e !important;
+  border: 1px solid #33483a !important;
+  border-radius: 9px;
+  outline: none;
+  font-size: 14px;
+}
+
+.admin-reels-form input::placeholder {
+  color: #64748b;
+}
+
+.admin-reels-form input:focus,
+.admin-reels-form select:focus {
+  border-color: #22c55e !important;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.12);
+}
+
+.admin-reels-form select option {
+  color: #f8fafc;
+  background: #111a14;
+}
+
+.reels-submit-btn {
+  width: fit-content;
+  min-width: 150px;
+  margin-top: 12px;
+  padding: 13px 22px;
+  color: #ffffff;
+  background: #15803d !important;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.reels-submit-btn:hover {
+  background: #16a34a !important;
+  transform: translateY(-1px);
+}
+
+.reels-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Saved Projects */
+
+.admin-reels-list {
+  width: 100%;
+  margin-top: 30px;
+  padding: 28px;
+  background: #111a14 !important;
+  border: 1px solid #263b2c;
+  border-radius: 16px;
+}
+
+.admin-reels-list h2 {
+  color: #f8fafc;
+  font-size: 22px;
+  margin: 0 0 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #263b2c;
+}
+
+.admin-reels-list > p {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.admin-reel-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 14px;
+  background: #0b120e !important;
+  border: 1px solid #263b2c;
+  border-radius: 12px;
+  transition: 0.2s ease;
+}
+
+.admin-reel-item:last-child {
+  margin-bottom: 0;
+}
+
+.admin-reel-item:hover {
+  background: #14251a !important;
+  border-color: #15803d;
+  transform: translateY(-2px);
+}
+
+.admin-reel-item h3 {
+  color: #f8fafc;
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.admin-reel-item p {
+  color: #86efac;
+  font-size: 13px;
+  margin: 0 0 10px;
+}
+
+.admin-reel-item a {
+  color: #4ade80;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.admin-reel-item a:hover {
+  color: #bbf7d0;
+  text-decoration: underline;
+}
+
+.reel-delete-btn {
+  flex-shrink: 0;
+  padding: 10px 16px;
+  color: #fecaca;
+  background: #351414 !important;
+  border: 1px solid #7f1d1d;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reel-delete-btn:hover {
+  background: #991b1b !important;
+  color: #ffffff;
+}
+
+/* Error message */
+
+.admin-reels-page .admin-error {
+  color: #fca5a5;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .admin-reels-page {
+    padding: 24px 16px;
+  }
+
+  .admin-reels-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-reels-header h1 {
+    font-size: 24px;
+  }
+
+  .admin-reels-form,
+  .admin-reels-list {
+    padding: 20px;
+  }
+
+  .admin-reel-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .reels-submit-btn {
+    width: 100%;
+  }
+}
+
+/* FIX: Manage Reels page layout and styling */
+
+.admin-dashboard:has(.reel-form) .admin-main {
+  background: #0b0f0c !important;
+  color: #f8fafc;
+}
+
+.admin-dashboard:has(.reel-form) .booking-management {
+  background: #111a14 !important;
+  color: #f8fafc !important;
+  border: 1px solid #263b2c;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.admin-dashboard .reel-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 100%;
+  padding: 25px;
+  background: #0b120e !important;
+  border: 1px solid #263b2c;
+  border-radius: 12px;
+}
+
+.admin-dashboard .reel-form label {
+  display: block;
+  color: #cbd5e1;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.admin-dashboard .reel-form input,
+.admin-dashboard .reel-form select {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  color: #f8fafc !important;
+  background: #111a14 !important;
+  border: 1px solid #33483a !important;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.admin-dashboard .reel-form input:focus,
+.admin-dashboard .reel-form select:focus {
+  outline: none;
+  border-color: #22c55e !important;
+}
+
+.admin-dashboard .reel-form button[type="submit"] {
+  width: fit-content;
+  min-width: 150px;
+  padding: 13px 22px;
+  margin-top: 12px;
+  background: #15803d !important;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Saved projects list */
+
+.admin-dashboard .reel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.admin-dashboard .reel-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  background: #0b120e !important;
+  border: 1px solid #263b2c;
+  border-radius: 12px;
+}
+
+.admin-dashboard .reel-item h3 {
+  color: #f8fafc;
+  margin: 0 0 8px;
+}
+
+.admin-dashboard .reel-item p {
+  color: #86efac;
+  margin: 0 0 10px;
+}
+
+.admin-dashboard .reel-item a {
+  color: #4ade80;
+  text-decoration: none;
+}
+
+.admin-dashboard .reel-item button {
+  background: #7f1d1d !important;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .admin-dashboard:has(.reel-form) .booking-management {
+    padding: 18px;
+  }
+
+  .admin-dashboard .reel-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-dashboard .reel-form button[type="submit"] {
+    width: 100%;
+  }
+}

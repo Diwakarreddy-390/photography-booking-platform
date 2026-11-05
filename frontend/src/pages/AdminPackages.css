@@ -1,0 +1,184 @@
+/* Admin Packages Page */
+
+.admin-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.booking-management {
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.booking-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.booking-toolbar h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 20px;
+}
+
+.booking-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+.booking-table th,
+.booking-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.booking-table th {
+  background: #f8fafc;
+  color: #475569;
+  font-size: 14px;
+}
+
+.booking-table td {
+  color: #334155;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .booking-management {
+    padding: 15px;
+  }
+}
+/* Add Package Button */
+.add-package-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.add-package-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Package Form */
+.package-form {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.package-form h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.package-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.package-form-grid label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.package-form-grid input,
+.package-form-grid textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+.package-description {
+  grid-column: span 2;
+}
+
+.package-form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.package-form-actions button {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.package-form-actions button[type="submit"] {
+  background: #16a34a;
+  color: white;
+}
+
+.package-form-actions button[type="button"] {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.package-form-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .package-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .package-description {
+    grid-column: span 1;
+  }
+}
+.edit-package-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.edit-package-btn:hover {
+  background-color: #1d4ed8;
+}
+.delete-package-btn {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.delete-package-btn:hover {
+  background-color: #b91c1c;
+}
