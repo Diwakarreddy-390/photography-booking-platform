@@ -21,3 +21,4 @@ build/
 .vscode/
 .DS_Store
 database/*.sql
+prl_shoots_schema.sql
