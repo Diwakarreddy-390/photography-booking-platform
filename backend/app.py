@@ -20,7 +20,13 @@ load_dotenv()
 app = Flask(__name__)
 
 FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:5173")
-CORS(app, origins=[FRONTEND_URL])
+
+ALLOWED_ORIGINS = [
+    FRONTEND_URL,
+    "https://photography-booking-platform.vercel.app",
+]
+
+CORS(app, origins=ALLOWED_ORIGINS)
 
 JWT_SECRET = os.getenv("JWT_SECRET")
 
