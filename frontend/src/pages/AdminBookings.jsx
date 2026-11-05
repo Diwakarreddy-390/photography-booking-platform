@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AdminBookings.css";
-
+import API_URL from "../api";
 function AdminBookings() {
     const navigate = useNavigate();
 
@@ -13,6 +13,7 @@ function AdminBookings() {
     const [selectedBooking, setSelectedBooking] = useState(null);
     const [searchTerm, setSearchTerm] = useState("");
     const [refreshing, setRefreshing] = useState(false);
+    
 
     const fetchBookings = async (isRefresh = false) => {
         const token = localStorage.getItem("adminToken");
@@ -27,7 +28,7 @@ function AdminBookings() {
             setError("");
 
             const response = await fetch(
-                "http://127.0.0.1:5000/admin-bookings",
+                `${API_URL}/admin-bookings`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -88,7 +89,7 @@ function AdminBookings() {
             setError("");
 
             const response = await fetch(
-                `http://127.0.0.1:5000/admin-bookings/${bookingId}`,
+                `${API_URL}/admin-bookings/${bookingId}`,
                 {
                     method: "PUT",
                     headers: {

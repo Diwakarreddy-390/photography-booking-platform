@@ -20,3 +20,4 @@ build/
 # Editor / OS
 .vscode/
 .DS_Store
+database/*.sql

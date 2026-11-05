@@ -18,7 +18,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173"])
+
+FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:5173")
+CORS(app, origins=[FRONTEND_URL])
 
 JWT_SECRET = os.getenv("JWT_SECRET")
 
@@ -1564,7 +1566,6 @@ def delete_admin_reel(reel_id):
 
         if db:
             db.close()
-
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)

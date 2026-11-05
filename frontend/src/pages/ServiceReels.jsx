@@ -4,7 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Play, Camera } from "lucide-react";
 import "./ServiceReels.css";
 
-const API_URL = "http://127.0.0.1:5000";
+import API_URL from "../api";
 
 const serviceDetails = {
   "wedding-photography": {

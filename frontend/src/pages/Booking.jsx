@@ -1,4 +1,4 @@
-
+import API_URL from "../api";
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import {
@@ -34,7 +34,7 @@ function Booking() {
         const fetchPackages = async () => {
             try {
                 const response = await fetch(
-                    "http://127.0.0.1:5000/packages"
+                    `${API_URL}/packages`
                 );
 
                 if (!response.ok) {
@@ -118,7 +118,7 @@ function Booking() {
 
         try {
             const response = await fetch(
-                "http://127.0.0.1:5000/bookings",
+               `${API_URL}/bookings`,
                 {
                     method: "POST",
                     headers: {

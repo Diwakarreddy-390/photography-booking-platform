@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AdminDashboard.css";
+import API_URL from "../api";
 
 function AdminDashboard() {
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ function AdminDashboard() {
     const fetchDashboard = async () => {
       try {
         const response = await fetch(
-          "http://127.0.0.1:5000/admin-dashboard",
+          `${API_URL}/admin-dashboard`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

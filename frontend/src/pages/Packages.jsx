@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import API_URL from "../api";
 
 import {
     Camera,
@@ -17,7 +18,7 @@ function Packages() {
     const [error, setError] = useState("");
 
     useEffect(() => {
-        fetch("http://127.0.0.1:5000/packages")
+        fetch(`${API_URL}/packages`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Unable to fetch packages");
